@@ -1,0 +1,14 @@
+expr=mult, expr1;
+expr1=("+",mult,expr1)|;
+mult=dice, mult1;
+mult1=("*",dice,mult1)|;
+dice=[term], dice1;
+dice1=("d",term,dice1)|;
+term= number | "(", expr , ")" | function, "(", expr, ")" | "prob", "(", expr, ",", expr, ")";
+function = "roll" | "avg";
+number= integer, [".", digit, {digit}];
+integer = nonzero, {digit};
+digit = nonzero|zero;
+nonzero = "1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9";
+zero = "0";
+syntax=expr;
