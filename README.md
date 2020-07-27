@@ -12,6 +12,8 @@ A testfile with some testing data is also included.
 	- roll(dice): generates a random number from the given dice structures
 	- avg(dice): returns the average value of the dice structure
 	- prob(number, dice): returns the probability of the given number in the dice structure
+- Dice structures can be combined in any syntactically valid way
+	(see testfile for examples)
 	
 # Usage:
 - Compile using makefile (make all)
